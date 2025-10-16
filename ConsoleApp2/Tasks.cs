@@ -135,15 +135,16 @@ namespace program
             Console.WriteLine($"85) {x}");
 
         }
-        
+
         public static void t86(int n)
         {
-            int z = n; int k = 0; int r = 0; int s = 0; int first = 0; int sznak = 0; int rr = r;
+            int z = n; int k = 0; int r = 0; int s = 0; int first = 0; int sznak = 0; int rr = r; int zn = 1;
             while (z > 0)
             {
                 r = z % 10;
                 s += r;
-                rr = -1 * r;
+                zn *= -1;
+                rr = r * zn;
                 sznak += rr;
                 first = r;
                 z /= 10;
@@ -155,6 +156,11 @@ namespace program
             Console.WriteLine($"86б) {s}");
             Console.WriteLine($"86в) {first}");
             Console.WriteLine($"86г) {sznak}");
+        }
+        
+        public static void t88()
+        {
+            
         }
     }
 }
