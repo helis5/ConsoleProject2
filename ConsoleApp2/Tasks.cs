@@ -133,6 +133,7 @@ namespace program
 
             Console.WriteLine("");
             Console.WriteLine($"85) {x}");
+            
         }
     }
 }
