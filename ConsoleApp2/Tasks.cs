@@ -101,7 +101,7 @@ namespace program
         public static void t84(int n, double b)
         {
             Console.WriteLine("");
-            
+
             double x = 1;
             for (int i = 1; i < n; i += 2) x += Math.Pow(Math.Sin(b), i);
 
@@ -119,6 +119,20 @@ namespace program
                 x += z;
             }
             Console.WriteLine($"84в) {x}");
+        }
+
+        public static void t85(int n, double a, double b)
+        {
+            double f(double x)
+            {
+                return (x * x + 1) * Math.Cos(x) * Math.Cos(x);
+            }
+            
+            double x = f(a);
+            for (double i = 1; i < n; i += 1) x += 2*f(a+i*b);
+
+            Console.WriteLine("");
+            Console.WriteLine($"85) {x}");
         }
     }
 }
