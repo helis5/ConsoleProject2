@@ -127,13 +127,34 @@ namespace program
             {
                 return (x * x + 1) * Math.Cos(x) * Math.Cos(x);
             }
-            
+
             double x = f(a);
-            for (double i = 1; i < n; i += 1) x += 2*f(a+i*b);
+            for (double i = 1; i < n; i += 1) x += 2 * f(a + i * b);
 
             Console.WriteLine("");
             Console.WriteLine($"85) {x}");
-            
+
+        }
+        
+        public static void t86(int n)
+        {
+            int z = n; int k = 0; int r = 0; int s = 0; int first = 0; int sznak = 0; int rr = r;
+            while (z > 0)
+            {
+                r = z % 10;
+                s += r;
+                rr = -1 * r;
+                sznak += rr;
+                first = r;
+                z /= 10;
+                k++;
+            }
+
+            Console.WriteLine("");
+            Console.WriteLine($"86a) {k}");
+            Console.WriteLine($"86б) {s}");
+            Console.WriteLine($"86в) {first}");
+            Console.WriteLine($"86г) {sznak}");
         }
     }
 }

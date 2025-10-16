@@ -15,5 +15,7 @@ class Program
         program.Tasks.t82(b);
         program.Tasks.t83(a);
         program.Tasks.t84(n, b);
+        program.Tasks.t85(n, a, b);
+        program.Tasks.t86(n);
     }
 }
