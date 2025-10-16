@@ -1,6 +1,7 @@
 using System;
 using System.IO.Compression;
 using System.Runtime.InteropServices;
+using System.Runtime.Serialization.Formatters;
 
 namespace program
 {
@@ -158,9 +159,27 @@ namespace program
             Console.WriteLine($"86г) {sznak}");
         }
         
-        public static void t88()
+        public static void t88(int n)
         {
-            
+            Console.WriteLine("");
+            int z = n; int zz = n * n; int nobr = 0; int r = 0; bool bl = false;
+            while (zz > 0)
+            {
+                r = zz % 10;
+                if (r == 3) bl = true;
+                zz /= 10;
+            }
+
+            while (z > 0)
+            {
+                r = z % 10;
+                nobr = nobr * 10 + r;
+                z /= 10;
+            }
+
+            string nstr = Convert.ToString(n); int l = nstr.Length;
+            string result = nstr[nstr.Length - 1] + nstr.Substring(1, nstr.Length - 2) + nstr[0];
+            Console.WriteLine($"88в) {result}");
         }
     }
 }
