@@ -15,6 +15,8 @@ namespace program
 
         public static void t78(int n, double a)
         {
+            Console.WriteLine("");
+
             double x = a;
             for (double i = 1; i <= n; i++) x *= a;
             Console.WriteLine($"78a) {x}");
@@ -44,6 +46,8 @@ namespace program
         {
             double x = 1;
             for (double i = 0.1; i < 10; i += 0.1) x *= 1 + Math.Sin(i);
+
+            Console.WriteLine("");
             Console.WriteLine($"79) {x}");
         }
         public static void t80(double a)
@@ -56,6 +60,8 @@ namespace program
                 z = z * y * (y - 1);
                 x += (Math.Pow(-1, i + 1) * r) / z;
             }
+
+            Console.WriteLine("");
             Console.WriteLine($"80) {x}");
         }
         public static void t81(int n, double a, double b)
@@ -64,6 +70,7 @@ namespace program
             double x = b + a;
             for (int i = 1; i <= n; i++) x = x * x + a;
 
+            Console.WriteLine("");
             Console.WriteLine($"81) {x}");
         }
         public static void t82(double b)
@@ -72,11 +79,13 @@ namespace program
             double x = 1;
             for (double i = 2; i < 64; i += 2) x *= (b - i) / (b + 1 - i);
 
+            Console.WriteLine("");
             Console.WriteLine($"82) {x}");
         }
 
         public static void t83(double a)
         {
+            Console.WriteLine("");
 
             double x = 1;
             for (double i = 2; i < 64; i++)
@@ -91,7 +100,8 @@ namespace program
 
         public static void t84(int n, double b)
         {
-
+            Console.WriteLine("");
+            
             double x = 1;
             for (int i = 1; i < n; i += 2) x += Math.Pow(Math.Sin(b), i);
 
@@ -101,6 +111,14 @@ namespace program
             for (int i = 1; i < n; i += 2) x += Math.Sin(Math.Pow(b, i));
 
             Console.WriteLine($"84б) {x}");
+
+            x = Math.Sin(b); double z = Math.Sin(b);
+            for (int i = 1; i < n; i += 2)
+            {
+                z *= Math.Sin(b);
+                x += z;
+            }
+            Console.WriteLine($"84в) {x}");
         }
     }
 }
