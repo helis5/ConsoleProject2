@@ -24,5 +24,9 @@ class Program
         program.Tasks.t93(n);
         program.Tasks.t95();
         //в тестовой ветке решаю 119
+
+        Console.WriteLine("введите eps: ");
+        double eps = double.Parse(Console.ReadLine());
+        program.Tasks.t119(eps);
     }
 }
