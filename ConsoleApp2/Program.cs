@@ -23,5 +23,6 @@ class Program
         program.Tasks.t91(n);
         program.Tasks.t93(n);
         program.Tasks.t95();
+        //в тестовой ветке решаю 119
     }
 }
