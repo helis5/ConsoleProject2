@@ -236,5 +236,17 @@ namespace program
             }
             Console.WriteLine($"95) p = {p}");
         }
+
+        public static void t119(double eps)
+        {
+            double a1 = 0; double a = 1; double i = 2;
+            while (Math.Abs(a1 - a) > eps)
+            {
+                a += 1 / (i * i);
+                i++;
+                a1 = a;
+            }
+            Console.WriteLine($"119a) s = {a}");
+        }
     }
 }
