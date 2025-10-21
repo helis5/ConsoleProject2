@@ -1,4 +1,5 @@
 using System;
+using System.Formats.Asn1;
 using System.IO.Compression;
 using System.Runtime.InteropServices;
 using System.Runtime.Serialization.Formatters;
@@ -158,7 +159,7 @@ namespace program
             Console.WriteLine($"86в) {first}");
             Console.WriteLine($"86г) {sznak}");
         }
-        
+
         public static void t88(int n)
         {
             Console.WriteLine("");
@@ -179,7 +180,61 @@ namespace program
 
             string nstr = Convert.ToString(n); int l = nstr.Length;
             string result = nstr[nstr.Length - 1] + nstr.Substring(1, nstr.Length - 2) + nstr[0];
+            Console.WriteLine($"88а) {bl}");
+            Console.WriteLine($"88б) {nobr}");
             Console.WriteLine($"88в) {result}");
+        }
+
+        public static void t90(int n, int m)
+        {
+            static int F(int a, int b)
+            {
+                while (b != 0)
+                {
+                    int temp = b;
+                    b = a % b;
+                    a = temp;
+                }
+                return a;
+            }
+
+            int f = F(m, n);
+            int p = m / f;
+            int q = n / f;
+
+            Console.WriteLine($"90) p = {p}, q = {q}");
+        }
+
+        public static void t91(int n)
+        {
+            double a = 1;
+            for (int i = 1; i < n; i++)
+            {
+                a = i * a + 1 / i;
+            }
+            Console.WriteLine($"91) a = {a}");
+        }
+        public static void t93(int n)
+        {
+            double a = 1;
+            for (int i = 3; i < n; i++)
+            {
+                a = i * a + 1 / i;
+            }
+            Console.WriteLine($"93) a = {a}");
+        }
+        public static void t95()
+        {
+            double a2 = 1; double a1 = 1; double a = 0; double p = 1;
+            for (int i = 2; i < 12; i++)
+            {
+                a = a2 + a1 / Math.Pow(2, i - 1);
+                a2 = a1;
+                a1 = a;
+
+                p *= a;
+            }
+            Console.WriteLine($"95) p = {p}");
         }
     }
 }
