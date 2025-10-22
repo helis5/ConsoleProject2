@@ -28,5 +28,6 @@ class Program
         Console.WriteLine("введите eps: ");
         double eps = double.Parse(Console.ReadLine());
         program.Tasks.t119(eps);
+        program.Tasks.k12(n);
     }
 }

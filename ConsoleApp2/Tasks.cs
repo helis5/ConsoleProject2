@@ -8,6 +8,15 @@ namespace program
 {
     public static class Tasks
     {
+
+        public static double Factorial(double number)
+        {
+            if (number == 1 || number == 0)
+                return 1;
+            else
+                return number * Factorial(number - 1);
+        }
+
         public static void t77(int n)
         {
             double x = 1;
@@ -247,6 +256,31 @@ namespace program
                 a1 = a;
             }
             Console.WriteLine($"119a) s = {a}");
+
+            a1 = 0; a = 1; i = 2;
+            while (Math.Abs(a1 - a) > eps)
+            {
+                a += Math.Pow(-2, i) / Factorial(i);
+                i++;
+                a1 = a;
+            }
+            Console.WriteLine($"119г) s = {a}");
+        }
+
+        public static void k12(int n)
+        {
+            double a1 = 1; double a = 1;
+            double b1 = 1; double b = 1;
+            double s = 0;
+            for (int i = 2; i < n; i++)
+            {
+                a = 5 * b1 + a1;
+                b = 2 * a1 + b1;
+                s += (a + b) / (2 + a * a + b * b);
+                a1 = a;
+                b1 = b;
+            }
+            Console.WriteLine($"k12) s = {s}");
         }
     }
 }
