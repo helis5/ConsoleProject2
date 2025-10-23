@@ -246,6 +246,17 @@ namespace program
             Console.WriteLine($"95) p = {p}");
         }
 
+        public static void t116(int n, double a)
+        {
+            double p = 1;
+            for (int i = 1; i < n; i++)
+            {
+                p *= i / (i + 1) - Math.Pow(Math.Cos(Math.Abs(a)), i);
+            }
+
+            Console.WriteLine($"116д) s = {p}");
+        }
+
         public static void t119(double eps)
         {
             double a1 = 0; double a = 1; double i = 2;
